@@ -1,0 +1,850 @@
+/* ===================================== */
+/* = Stylesheets for Atradius Internet = */
+/* = 2009 - Bas Zurburg, Atradius      = */
+/* ===================================== */
+
+/* ======================== */
+/* = Basic site structure = */
+/* ======================== */
+
+/* Set font-size to 62.5% which should be 10px in most browsers but has the andvantage of being resizable. */
+body{
+	background: url(../images/backgrounds/body.jpg) #ccc 0 0 repeat-x;
+	font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+	font-size: 62.5%;
+	color: #222;
+}
+
+#blank {
+	background-image: none;
+	background-color: #FFFFFF;
+}
+
+#site, #footer, #topnav .inner {
+  align: center;
+  width: 980px;
+}
+
+#site{
+  position: relative;
+  text-align: left;
+  align: center;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.1em;	
+}
+
+.wrapper {
+  display: table;
+  align: center;
+}
+
+.row {
+display:table-row;
+}
+
+.cell, .cell25, .cell50 {
+  display: table-cell;
+  vertical-align: top;
+}
+
+
+
+
+.max {
+  width: 100%;
+}
+
+
+.clear {
+  clear: both;
+}
+
+.comment {color: #999;}
+
+/* items with class tohide need to be set to hidden by javascript */
+.hidden {
+  display: none;
+}
+
+/* items with class unhide need to be made visible with javascript */
+.unhide {
+  display: none;
+}
+
+/* ========== */
+/* = Tables = */
+/* ========== */
+
+/* Table styles for the modules */
+
+#modules table,
+#modules table caption{
+  text-align:left;
+}
+
+#modules table caption{
+	margin-bottom: 0.4em;
+}
+
+#modules table td,
+#modules table th{
+	font-weight: normal;
+	text-align: left;
+	vertical-align: top;
+	padding: 2px 0.3em 2px 2px;
+	border-bottom: 1px dotted #ccc;
+}
+
+/* General purpose no-wrap style */
+td.nowrap,
+td.date{
+	white-space: nowrap;
+}
+
+/* General purpose textalign for text */
+td.center,
+th.center{
+	text-align: center;
+}
+
+td .right,
+th .right,
+#modules table td.right,
+#modules table th.right{
+	text-align: right;
+}
+
+/* ========== */
+/* = Header = */
+/* ========== */
+
+#header {
+  display: table-header-group;
+  height: 130px;
+}
+
+#header #dynamicline {
+  height: 7px;
+  background-image: url(../images/backgrounds/dynamicline.gif);
+}
+
+#topnav .inner {
+  margin-top: 30px;
+  height: 83px;
+}
+
+
+#topnav .logo {
+  width: 200px;
+
+}
+
+#topnav .logo img{
+  margin-top: 6px;
+  margin-left: 14px;
+}
+
+#topnav div.menu {
+  width: 600px;
+}
+
+#topnav #topmenu {
+    position: relative;
+    z-index: 12;
+}
+
+#topnav #topmenu ul.menu{
+  margin-right: 4px;
+}
+
+
+#topnav .search {
+  background: url(../images/backgrounds/search_background.png) top left no-repeat;
+  width:192px;
+  vertical-align:top;
+  padding-left:8px;
+  padding-top: 1px;
+}
+
+
+#topnav .search .searchinputbox{
+  border-top: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  width:116px;
+  height:13px;
+  background-color:#d2d2d2;
+  font-size:0.8em;
+}
+
+#topnav .search .rollover{
+	position: relative;
+	top: 3px;
+	left: 4px;	
+}
+
+#topnav #mainmenu {
+  z-index: 11;
+}
+
+
+#mainnav #siteid{
+  float: right;
+  margin-right: 0px;
+  margin-left: auto;
+}
+
+#mainnav h2{
+  font-size: 1.4em;
+  color: #000000;
+  padding-top: 6px;
+}
+
+
+
+/* ============== */
+/* = Breadcrumb = */
+/* ============== */
+
+#breadcrumb {
+	margin-top: 5px;
+	margin-bottom: 1em;
+	line-height: 1.2em;
+}
+
+#breadcrumb a{
+	color: #3f3f3f;
+}
+
+#breadcrumb a:hover{
+	color: #fb3f3f;
+}
+/* ============== */
+/* = Main  Area = */
+/* ============== */
+
+#main {
+ 	display: table-row-group;
+	background-color:#fff;
+    position: relative;
+  	height: 300px;
+}
+
+
+
+#main h2 {
+  color: #636563;
+  font-size:150%;
+  font-weight: normal;
+  margin-top: 0.2em;
+  margin-bottom: 0.6em;
+  display: block;
+  border-bottom: 1px solid #999;
+ }
+
+
+#main p{
+	margin-bottom: 0.8em;
+}
+
+#main .modulecontent p{
+	margin-bottom: 0.4em;
+}
+
+#main p.readmore a, #main p.readmore a:visited {
+  background:transparent url(../images/icons/a-readmore.gif) no-repeat scroll 100% 60%;
+  border:medium none;
+  color:#FB0000;
+  float:right;
+  margin:0;
+  padding-right:10px;
+  font-size:10pt;
+}
+
+#main a {
+	color:#fb3f3f;
+	text-decoration:none;
+}
+
+#main a:visited {
+	color:#fb4f4f;
+}
+
+#main a:hover {
+	color:#f00;
+	border-bottom:1px solid #f00;
+}
+
+/* grey square bulet */
+#main ul li { 
+	background:transparent url(../images/icons/content-li.gif) no-repeat scroll 0pt 6px;
+	margin-bottom:1em;
+	padding-left:11px;
+}
+
+
+/* ============= */
+/* = Modules   = */
+/* ============= */
+
+#main .modulecontent {
+  background-color: #f7f7f7;
+  border-right: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7;
+  border-left: 1px solid #f1f1f1;
+  padding: 2px 20px 5px;
+}
+
+
+#main #modules .cell h3,
+#main #modules .cell25 h3,
+#main #modules .cell50 h3 {
+  color:#fff;
+  font-size: 100%;
+  font-weight:bold;
+  height: 17px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  padding: 2px 20px 2px 10px;
+}
+
+
+#main #modules .cell h3 {
+  background: url(../images/backgrounds/frontmodulehhead310.gif) top left no-repeat;
+  
+}
+
+#main #modules .cell25 h3 {
+  background: url(../images/backgrounds/frontmodulehhead330.gif) top left no-repeat;
+
+}
+
+#main #modules .cell50 h3 {
+  background: url(../images/backgrounds/frontmodulehhead330.gif) top left no-repeat;
+}
+
+
+/* grey square bulet */
+#main #modules ul li { 
+	background:transparent url(../images/icons/menu-li.gif) no-repeat scroll 0pt 6px;
+	margin-bottom:0.1em;
+	padding-left:11px;
+}
+
+/* ============= */
+/* = Content   = */
+/* ============= */
+
+#content {
+  padding:0px 15px 15px 15px;
+}
+
+#content h1 {
+  color:#FB3F3F;
+  font-family:"Arial Narrow",Arial,Helvetica,sans-serif;
+  font-size:280%;
+  font-weight:bold;
+ }
+
+#content h1 small{
+	font-family: "Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+	display: block;
+	font-size: 40%;
+	color: #000;
+	padding-bottom: 0.3em;
+}
+
+
+#main #content h3.header {
+  color: #636563;
+  font-size:100%;
+  background:#DEDFDE url(../images/backgrounds/navleftheader.gif) repeat-x scroll 0pt;
+  height:21px;
+  letter-spacing:0.02em;
+  line-height:21px;
+  padding-left:10px;
+  margin-bottom: 12px;
+}
+
+#main #content address {
+line-height: 16px;
+}
+
+
+#main #content a {
+	border-bottom:1px solid #fb3f3f;
+}
+
+#main #content a.more {
+  background:transparent url(../images/backgrounds/arrow_right_thin.gif) no-repeat scroll left 50%;
+  border: medium none;
+  color: #fb3f3f;
+  padding-left:10px;
+}
+
+#main #content p.date {
+  font-weight: bold;
+  color: #636563;
+}
+
+#main #content ul { 
+ padding-bottom: 10px;
+ margin-left: 10px;
+}
+
+#main #content p.inactive {
+ /* display: none; */
+}
+
+/* ============= */
+/* = Home Page = */
+/* ============= */
+
+#home #panetop {
+  display: table;
+  border-collapse: collapse;
+  margin: 10px;
+}
+
+#home #panetop .cell{
+  width: 320px;
+}
+
+#home #panetop .content {
+  padding: 0px 10px;
+}
+
+
+#home #modules {
+  display: table;
+  margin: 0px 6px 10px 6px;
+}
+
+#home #main h1 {
+  color: #636563;
+  font-size:200%;
+  margin-bottom: 0.2em;
+ }
+
+#home #main h1 small{
+	display: block;
+	font-size: 60%;
+	padding-bottom: 0.3em;
+}
+
+#home #modules .cell{
+  width: 320px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0px 6px;
+
+}
+
+#home #modules .cell25{
+  width: 260px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0px 6px;
+
+}
+
+#home #modules .cell50{
+  width: 440px;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0px 6px;
+
+
+}
+
+#home #modules .modulecontent {
+  height: 135px;
+  overflow:hidden;
+  padding-top: 4px;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-bottom: 10px;
+}
+
+#home #modules .modulecontent .bodyfont8 {
+  padding: 2px 20px 5px;	
+}
+
+
+#home #modules .modulecontent .moduletext {
+  height: 128px;
+  overflow:hidden;
+}
+
+#home #modules .modulecontent .moduletext {
+  height: 128px;
+  overflow:hidden;
+}
+
+#home .modulecontent h4 {
+ font-weight: bold;
+ font-size: 104%;
+}
+
+
+#home .modulecontent img {
+margin: 2px 0px;
+}
+
+
+#home .modulecontent ul {
+margin-bottom: 10px;
+}
+
+
+/* ============= */
+/* = Press     = */
+/* ============= */
+
+#main #content #press h3 {
+  color:#FB3F3F;
+  font-size:105%;
+  padding-bottom: 0.2em;
+ }
+
+#main #content #press h3 span.date {
+  font-weight: normal;
+  font-size:95%;
+  color: #636563;
+}
+
+#main #content  #press h3.hide {
+  margin-bottom: 0.2em;
+ }
+
+#main #content a.toggle {
+    float: right;
+	border: none medium;
+ }
+
+#main #content a.toggle.down {
+	background:transparent url(../images/icons/arrow-down.gif) no-repeat scroll 0pt 3px;
+	padding-left:12px;
+ }
+
+#main #content a.toggle.down:hover {
+	background:transparent url(../images/icons/arrow-down-hover.gif) no-repeat scroll 0pt 3px;
+	color: #f36d00;
+ }
+
+#main #content a.toggle.up {
+	background:transparent url(../images/icons/arrow-up.gif) no-repeat scroll 0pt 3px;
+	padding-left:12px;
+ }
+
+#main #content a.toggle.up:hover {
+	background:transparent url(../images/icons/arrow-up-hover.gif) no-repeat scroll 0pt 3px;
+	color: #f36d00;
+ }
+
+/* ============= */
+/* = Left Nav  = */
+/* ============= */
+
+#navleft {
+	width: 180px;
+	padding-top:55px;
+}
+
+#navleft h3 {
+	background: url(../images/backgrounds/navleftheader_dark.gif) #fff 0 0 no-repeat;
+	color: #fff;
+	font-weight:normal;
+	letter-spacing: 1px;
+	height:21px;
+	line-height:21px;
+	padding-left:10px;
+	margin-left: 4px;
+}
+
+#navleft ul.menu {
+	padding: 10px;
+	color: #fb3f3f;
+	font-size: 104%;
+}
+
+#navleft ul li { 
+	background:transparent url(../images/icons/menu-li.gif) no-repeat scroll 0pt 6px;
+	padding-top: 1px;
+}
+
+#navleft ul li.active { 
+	font-weight: bold;
+}
+
+#navleft ul li.active ul{ 
+	font-weight: normal;
+}
+
+#navleft ul li a:visited{ 
+	color: #fb3f3f;
+}
+
+/* second level nav */
+#navleft ul li ul li{ 
+  background: none;
+  padding-left: 6px;
+}
+#navleft li.inactive ul {
+  display: none;
+}
+
+
+/* ============== */
+/* = Right col  = */
+/* ============== */
+
+#rightcol {
+	width: 240px;
+	padding-top:55px;
+}
+
+#rightcol .modulecontent {
+width: 208px;
+margin-bottom: 15px;
+}
+
+
+/* ========== */
+/* = Footer = */
+/* ========== */
+
+#footer {
+  display: block;
+  height: 21px;
+  line-height: 21px;
+  background: url(../images/backgrounds/footer.gif) 0 0 no-repeat;
+  margin: 5px 0px;
+}
+
+#footer #footerright {
+  color:#969696;
+  float:right;
+  padding-right:12px;
+  text-align:right;
+  width:400px;
+}
+
+#nav-footer ul li{
+	float: left;
+	color: #969696;
+	padding:0px 0px 0px 12px;
+}
+
+#nav-footer ul li a{
+	color: #969696;
+}
+
+#nav-footer ul li a:hover{
+	text-decoration:underline;
+}
+
+/* ======================= */
+/* = Download Overview   = */
+/* ======================= */
+
+#downloads {
+margin-top: 20px;
+}
+
+#downloads p {
+	margin-bottom: 0.4em;
+}
+
+
+#downloads .downloaditem {
+	margin-bottom: 20px;
+	padding-bottom: 5px;
+	border-bottom: 1px dashed #AAAAAA;
+}
+
+#downloads .downloaditem table {
+	text-align:left;
+}
+
+#downloads .downloaditem th.title {
+	vertical-align:top;
+	font-weight: bold;
+/*	background-color: #f7f7f7; */
+}
+
+#downloads .downloaditem td.image {
+	width: 110px;
+	padding-right: 10px;
+	vertical-align:top;
+}
+
+#downloads .downloaditem td.description {
+	vertical-align:top;
+	padding-right: 5px;
+/*	background-color: #f7f7f7; */
+}
+
+#main #content #downloads .downloaditem td.description ul{
+	padding-bottom: 4px;
+}
+
+
+#downloads .downloaditem td.download {
+	width: 90px;
+	padding: 0px 5px 0px 10px;
+/*	background: url(../images/backgrounds/downloadsbg.jpg) #f7f7f7 right bottom no-repeat */
+}
+
+#downloads .downloaditem td.download img{
+	margin-right: 5px;
+}
+
+/* ======================= */
+/* = Basic form elements = */
+/* ======================= */
+
+
+select,
+input{
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 9pt;
+}
+
+input.text{
+	border: 1px solid #676767;
+	padding: 2px 1px;
+}
+
+input.button{
+	font-size: 90%;
+}
+
+.atradiusForm {
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+.atradiusForm .standard {
+	border: 1px;
+	background-color: #f8f8f8;
+	border-style: solid;
+	border-top-color: #e9e9e9;
+	border-right-color: #d0d0d0;
+	border-bottom-color: #d0d0d0;
+	border-left-color: #e9e9e9;
+}
+
+.atradiusForm .standard h3 {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+
+.atradiusForm .blank {
+	border: 1px;
+	border-style: solid;
+	border-color: #fefefe;
+}
+
+.atradiusForm .validationError {
+	border: 2px;
+	background-color: #f8f8f8;
+	border-style: solid;
+	border-top-color: #f00;
+	border-right-color: #c00;
+	border-bottom-color: #c00;
+	border-left-color: #f00;
+	padding: 10px;
+}
+
+.atradiusForm input.text,
+.atradiusForm textarea.text,
+.atradiusForm select.text{
+	border-top: 1px solid #999;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #999;
+	width: 90%;
+}
+
+.atradiusForm input.date {
+	width: 100px;
+}
+
+.atradiusForm input.number {
+	width: 100px;
+}
+
+.atradiusForm input.button {
+	margin: 10px 20px;
+}
+
+.atradiusForm thead {
+	height: 0px;
+}
+
+.atradiusForm .subheading{
+	display: block; 
+ 	background-color: #ccc;
+	color: #000;
+	padding: 3px 8px 2px 8px;
+	margin-bottom: 12px;
+	margin-top: 12px;
+	border-bottom: 1px solid #999;
+}
+
+.atradiusForm .blank .subheading{
+ 	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+}
+
+.atradiusForm .subtext{
+	color: #666;
+	padding: 0px 12px 12px 12px;
+}
+.atradiusForm .element td{
+	padding-bottom: 4px;
+}
+
+.atradiusForm .label{
+	color: #333;
+	padding-left:  20px;
+	padding-top:    2px;
+	padding-right: 10px;
+	vertical-align: top;
+}
+
+.atradiusForm .error{
+	color: #f00;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.atradiusForm .left{
+	text-align: left;
+}
+
+.atradiusForm .right{
+	text-align: right;
+}
+
+
+.atradiusForm .Mandatory,
+.atradiusForm .left.Mandatory {
+	background: url(../images/backgrounds/mandatory.gif) right 4px no-repeat;
+	padding-right: 8px;
+}
+
+.atradiusForm .right.Mandatory {
+	background: url(../images/backgrounds/mandatory.gif) left 4px no-repeat;
+	padding-left: 8px;
+}
+
+.form .thankyou {
+ 	background-color: #ccc;
+	padding: 10px;
+	border: 2px solid #333;
+	display: block; 
+	margin-top: 12px;
+}

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- Database related configuration block -->
+	<database>
+		<defaultDataSource>SYMA</defaultDataSource>
+		<datasource>
+			<name>SYMW</name>
+			<schema>ORABUP0</schema>
+			<providerURL>iiop://localhost:2809</providerURL>
+			<factory>com.ibm.websphere.naming.WsnInitialContextFactory</factory>
+			<jndiName>jdbc/SYMW</jndiName>
+		</datasource>
+		<datasource>
+			<name>SYMA</name>
+			<schema>ORABUP0</schema>
+			<providerURL>iiop://localhost:2809</providerURL>
+			<factory>com.ibm.websphere.naming.WsnInitialContextFactory</factory>
+			<jndiName>jdbc/syma</jndiName>
+		</datasource>
+		<datasource>
+			<name>SYMF</name>
+			<schema>ORABUP0</schema>
+			<providerURL>iiop://localhost:2809</providerURL>
+			<factory>com.ibm.websphere.naming.WsnInitialContextFactory</factory>
+			<jndiName>jdbc/symf</jndiName>
+		</datasource>
+		<datasource>
+			<name>orxd</name>
+			<schema>ORABUP0</schema>
+			<providerURL>iiop://localhost:2809</providerURL>
+			<factory>com.ibm.websphere.naming.WsnInitialContextFactory</factory>
+			<jndiName>jdbc/orxd</jndiName>
+		</datasource>
+	</database>
+</configuration>

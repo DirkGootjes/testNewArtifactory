@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	
+	<action-mappings>
+		<action path="/index"
+			type="com.atradius.action.ApplicationController">
+			<forward name="contact" path="/MaintainContact.do" redirect="true" />
+			<forward name="individual" path="/MaintainIndividual.do" redirect="true" />
+			<forward name="text" path="/MaintainText.do" redirect="true" />
+			<forward name="error" path="display.error" />
+			<!-- Added for FreeText Editor CRN [START] -->
+			<forward name="freetext" path="/MaintainFreeText.do" redirect="true" />
+			<!-- Added for FreeText Editor CRN [END] -->
+			<!-- Added for Tcode Editor CRN [START] -->
+			<forward name="conditioncode" path="/MaintainConditionCode.do" redirect="true" />
+			<forward name="multiChoiceConditioncode" path="/MaintainMultiChoiceConditionCode.do" redirect="true" />
+			<!-- Added for Tcode Editor CRN [END] -->
+			<!-- Added for Claims by INVSAR1 on 26.08.2014 -->
+			<forward name="createletter" path="/MaintainClaimSectionVariables.do" redirect="true" />
+			<forward name="debtrlc" path="/MaintainRLCLiabilityText.do" redirect="true" />
+			<forward name="plcassessment" path="/MaintainPLCLiabilityText.do" redirect="true" />
+			<forward name="costcalculation" path="/MaintainCCLiabilityText.do" redirect="true" />
+			<forward name="claimspayment" path="/MaintainCLMPayements.do" redirect="true" />
+			<!-- End of Addition for Claims by INVSAR1 on 26.08.2014 -->
+
+			
+			<!-- Added for Modula Policy CRN [START] -->
+			<forward name="policyFreeText" path="/MaintainPolicyDocFreeText.do" redirect="true" />	
+			<forward name="policyCoverTradeDesc" path="/MaintainPolicyDocCoverTradeDesc.do" redirect="true" />	
+			<forward name="policyModuleVarValue" path="/MaintainPolicyDocModuleVarValue.do" redirect="true" />
+			<forward name="maintainOPDTextVarValue" path="/MaintainOPDTextDef.do" redirect="true" />
+						
+			<!-- Added for Modula Policy CRN by INHYOU1 -->
+			<forward name="maintainPaymentConditions" path="/MaintainPaymentConditions.do" redirect="true" />
+			<forward name="maintainPremiumDetails" path="/MaintainPremiumDetails.do" redirect="true" />
+
+		</action>
+		<action path="/logout"
+			type="com.atradius.action.SessionController">
+			<forward name="success" path="/pages/Info.jsp" />
+		</action>
+		<action path="/MaintainContact"
+			type="com.atradius.action.MaintainContactController">
+			<forward name="success" path="maintain.contact" />
+			<forward name="error" path="display.error" />
+		</action>
+		<action path="/MaintainIndividual"
+			type="com.atradius.action.MaintainIndividualController">
+			<forward name="success" path="maintain.individual" />
+			<forward name="error" path="display.error" />
+		</action>
+		<action path="/MaintainText"
+			type="com.atradius.action.MaintainTextController">
+			<forward name="success" path="maintain.text" />
+			<forward name="error" path="display.error" />
+		</action>
+		<!-- Added for FreeText Editor CRN [START] -->
+		<action path="/MaintainFreeText"
+			type="com.atradius.action.MaintainFreetextController">
+			<forward name="success" path="maintain.freetext" />
+			<forward name="error" path="display.error" />
+		</action>
+		<!-- Added for FreeText Editor CRN [END] -->
+		<!-- Added for Tcode Editor CRN [START] -->
+		<action path="/MaintainConditionCode"
+			type="com.atradius.action.MaintainConditionCodeController">
+			<forward name="success" path="maintain.conditioncode" />
+			<forward name="error" path="display.error" />
+		</action>
+		<action path="/MaintainMultiChoiceConditionCode"
+			type="com.atradius.action.MaintainMultiChoiceConditionCodeController">
+			<forward name="success" path="maintain.multiChoiceConditioncode" />
+			<forward name="error" path="display.error" />
+		</action>
+		<!-- Added for Tcode Editor CRN [END] -->
+		<!-- Added for Claims by INVSAR1 on 26.08.2014 -->
+		<action path="/MaintainClaimSectionVariables"
+			type="com.atradius.action.MaintainClaimSectionVariablesController">
+			<forward name="success" path="maintain.claimsectionvariables" />
+			<forward name="error" path="display.error" />
+		</action>
+		<action path="/MaintainRLCLiabilityText"
+			type="com.atradius.action.MaintainLiabilityTextController">
+			<forward name="success" path="maintain.liabilitytext" />
+			<forward name="error" path="display.error" />
+		</action>
+		<action path="/MaintainPLCLiabilityText"
+			type="com.atradius.action.MaintainLiabilityTextController">
+			<forward name="success" path="maintain.liabilitytext" />
+			<forward name="error" path="display.error" />
+		</action>
+		<action path="/MaintainCCLiabilityText"
+			type="com.atradius.action.MaintainLiabilityTextController">
+			<forward name="success" path="maintain.liabilitytext" />
+			<forward name="error" path="display.error" />
+		</action>
+		<action path="/MaintainCLMPayements"
+			type="com.atradius.action.MaintainCLMPayementsController">
+			<forward name="success" path="maintain.clmpayment" />
+			<forward name="error" path="display.error" />
+		</action>
+		
+		<!-- End of Addition for Claims by INVSAR1 on 26.08.2014 -->
+
+<!-- Added for Modula Policy CRN [START] -->
+		<action path="/MaintainPolicyDocFreeText"
+			type="com.atradius.action.PolicyDocFreeTextController">
+			<forward name="success" path="maintain.policyDocFreeText" />
+			<forward name="error" path="display.error" />
+		</action>
+		
+		<action path="/MaintainPolicyDocCoverTradeDesc"
+			type="com.atradius.action.PolicyDocCoverTradeDescController">
+			<forward name="success" path="maintain.policyDocCoverTradeDesc" />
+			<forward name="error" path="display.error" />
+		</action>
+		
+		<action path="/MaintainPolicyDocModuleVarValue"
+			type="com.atradius.action.PolicyDocModuleVarController">
+			<forward name="success" path="maintain.policyDocModuleVar" />
+			<forward name="error" path="display.error" />
+		</action>
+		
+		<action path="/MaintainOPDTextDef"
+			type="com.atradius.action.MaintainOPDTextDefController">
+			<forward name="success" path="maintain.OPDTextDef" />
+			<forward name="error" path="display.error" />
+		</action>
+		<!-- Added for Modula Policy CRN by INHYOU1 -->
+		
+		<action path="/MaintainPaymentConditions"
+			type="com.atradius.action.MaintainPaymentConditionsController">
+			<forward name="success" path="maintain.paymentConditions" />
+			<forward name="error" path="display.error" />
+		</action>
+		
+		<action path="/MaintainPremiumDetails"
+			type="com.atradius.action.MaintainPremiumDetailsController">
+			<forward name="success" path="maintain.premiumDetails" />
+			<forward name="error" path="display.error" />
+		</action>
+		
+	</action-mappings>
+
+	<!-- ===================================== Controller Configuration -->
+	<controller processorClass="org.apache.struts.tiles.TilesRequestProcessor" />
+
+	<!-- ================================ Message Resources Definitions -->
+	<message-resources parameter="com.atradius.servatnet.properties.i18n.ApplicationResources" />
+
+	<!-- ======================================= Plug Ins Configuration -->
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-definitions.xml" />
+		<set-property property="moduleAware" value="true" />
+		<set-property property="definitions-parser-validate" value="true" />
+
+	</plug-in>
+</struts-config>

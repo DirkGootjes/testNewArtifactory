@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<appender name="A1" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-4r [%t] %-5p %c %x - %m%n"/>
+		</layout>
+	</appender>
+
+	<appender name="SocketInfoLogger" class="org.apache.log4j.net.SocketAppender">
+		<param name="Port" value="2244" />
+		<param name="RemoteHost" value="localhost" />
+	</appender>
+
+     
+    <logger name="com.atradius.util.exception.messages">
+        <level value="WARN"/>
+    </logger> 
+    <logger name="com.atradius.web.util.exception.messages">
+        <level value="WARN"/>
+    </logger>	
+	<root>
+		<!-- <priority value="debug"/>
+		<appender-ref ref="A1"/>  
+		<appender-ref ref="SocketInfoLogger"/>   	   
+		 -->
+		 		<appender-ref ref="A1"/>  
+	</root>
+
+
+</log4j:configuration>

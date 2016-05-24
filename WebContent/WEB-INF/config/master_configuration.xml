@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<configuration>
+
+	<xml fileName="framework/db_config.xml" />
+	<xml fileName="framework/framework_config.xml" />
+	
+	<!-- Properties files configuration -->
+	<properties config-name="rtl_languages" fileName="application/app.properties" />
+	
+</configuration>

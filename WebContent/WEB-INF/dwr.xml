@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 2.0//EN" "http://getahead.org/dwr/dwr20.dtd">
+
+<dwr>
+	<allow>
+		<create creator="new" javascript="ContactDetailsJS">
+			<param name="class"
+				value="com.atradius.web.dwr.ContactDetailsAJAX" />
+		</create>
+		<create creator="new" javascript="CommonJS">
+			<param name="class"
+				value="com.atradius.web.dwr.CommonAJAX" />
+		</create>
+		<create creator="new" javascript="IndividualDetailsJS">
+			<param name="class"
+				value="com.atradius.web.dwr.IndividualDetailsAJAX" />
+		</create>
+		<create creator="new" javascript="TextDetailsJS">
+			<param name="class"
+				value="com.atradius.web.dwr.TextDetailsAJAX" />
+		</create>
+		<!-- Added for FreeText Editor CRN [START] -->
+		<create creator="new" javascript="FreetextDetailsJS">
+			<param name="class"
+				value="com.atradius.web.dwr.FreetextDetailsAJAX" />
+		</create>
+		<!-- Added for FreeText Editor CRN [END] -->
+		<!-- Added for Tcode Editor CRN [START] -->
+		<create creator="new" javascript="ConditionCodeDetailsJS">
+			<param name="class"
+				value="com.atradius.web.dwr.ConditionCodeDetailsAJAX" />
+		</create>
+		<create creator="new" javascript="MultiChoiceConditionCodeDetailsJS">
+			<param name="class"
+				value="com.atradius.web.dwr.MultiChoiceConditionCodeDetailsAJAX" />
+		</create>
+		<!-- Added for Tcode Editor CRN [END] -->
+		<!-- Added for Claims by INVSAR1 on 26.08.2014 -->
+		<create creator="new" javascript="MaintainClaimSectionVariablesJS">
+			<param name="class"
+				value="com.atradius.web.dwr.MaintainClaimSectionVariablesAJAX" />
+		</create>
+		<create creator="new" javascript="MaintainLiabilityTextJS">
+			<param name="class"
+				value="com.atradius.web.dwr.MaintainLiabilityTextAJAX" />
+		</create>
+		<create creator="new" javascript="MaintainClaimsPaymentJS">
+			<param name="class"
+				value="com.atradius.web.dwr.MaintainClaimsPaymentAJAX" />
+		</create>
+		<!-- End of Addition for Claims by INVSAR1 on 26.08.2014 -->
+
+<!-- Added for Modula Policy CRN [START] -->
+		<create creator="new" javascript="PolicyDocFreeTextJS">
+			<param name="class"
+				value="com.atradius.web.dwr.PolicyDocFreeTextAJAX" />
+		</create>
+		
+		<create creator="new" javascript="PolicyDocCoverTradedescJS">
+			<param name="class"
+				value="com.atradius.web.dwr.PolicyDocCoverTradeDescAJAX" />
+		</create>
+		
+		<create creator="new" javascript="PolicyDocModuleVarJS">
+			<param name="class"
+				value="com.atradius.web.dwr.PolicyDocModuleVarAJAX" />
+		</create>
+		
+		<create creator="new" javascript="MaintainOPDTextDefAJAXJS">
+			<param name="class"
+				value="com.atradius.web.dwr.MaintainOPDTextDefAJAX" />
+		</create>
+		
+		
+		<create creator="new" javascript="PaymentConditionsDescAJAXJS">
+			<param name="class"
+				value="com.atradius.web.dwr.PaymentConditionsDescAJAX" />
+		</create>
+		
+		<create creator="new" javascript="PremiumDetailsAJAXJS">
+			<param name="class"
+				value="com.atradius.web.dwr.PremiumDetailsAJAX" />
+		</create>
+		<!-- Added for Modula Policy CRN [END] -->
+
+		<convert converter="bean" match="com.atradius.beans.ContactAJAXBean"/>
+		<convert converter="bean" match="com.atradius.beans.ContactDetails"/>
+		<convert converter="bean" match="com.atradius.beans.AJAXResult"/>
+		<convert converter="bean" match="com.atradius.beans.TextAJAXBean"/>
+		<convert converter="bean" match="com.atradius.beans.TextDetails"/>
+		<convert converter="bean" match="com.atradius.beans.IndividualAJAXBean"/>
+		<convert converter="bean" match="com.atradius.beans.IndividualDetails"/>
+		<convert converter="bean" match="com.atradius.beans.MaintainLiabilityAJAXBean"/>
+		<convert converter="bean" match="com.atradius.beans.ClaimsPaymentTextBean"/>
+		
+		<!-- Added for FreeText Editor CRN [START] -->
+		<convert converter="bean" match="com.atradius.beans.FreetextAJAXBean"/>
+		<!-- Added for FreeText Editor CRN [END] -->
+		<!-- Added for Tcode Editor CRN [START] -->
+		<convert converter="bean" match="com.atradius.beans.ConditionCodeAJAXBean"/>
+		<convert converter="bean" match="com.atradius.beans.MultiChoiceConditionCodeAJAXBean"/>
+		
+		<!-- Added for Claims by INVSAR1 on 26.08.2014 -->
+		<convert converter="bean" match="com.atradius.beans.SectionVariableAjaxBean"/>
+		<!-- Added for Claims by INVSAR1 on 26.08.2014 -->
+
+		<!-- Added for Modula Policy CRN [START] -->
+		<convert converter="bean" match="com.atradius.beans.PolicyDocFreeTextBean"/>
+		<convert converter="bean" match="com.atradius.beans.PolicyDocCoverTradeDescBean"/>
+		<convert converter="bean" match="com.atradius.beans.PolicyDocModuleVarBean"/>
+		<convert converter="bean" match="com.atradius.beans.MaintainOPDTextBean"/>
+		<convert converter="bean" match="com.atradius.beans.PaymentConditionsBean"/>
+		<convert converter="bean" match="com.atradius.beans.PremiumDetailsBean"/>
+		<!-- Added for Modula Policy CRN [END] -->		
+
+		<!-- Added for Tcode Editor CRN [END] -->
+		<convert match="java.lang.Exception" converter="exception">
+		  <param name='include' value='message'/>
+		</convert>
+		  <converter converter="map" match="java.util.Map" />
+	</allow>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.ContactAJAXBean;
+		  import com.atradius.beans.ContactDetails;
+		  com.atradius.beans.ContactAJAXBean ContactDetailsJS.loadContactDetails(int index,java.lang.String langCode);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  void CommonJS.startTimer();
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  void CommonJS.stopTimer();
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.AJAXResult;
+		  import com.atradius.beans.ContactDetails;
+		  com.atradius.beans.AJAXResult ContactDetailsJS.saveUnicodeContactDetails(com.atradius.beans.ContactDetails contact,java.lang.String langCode);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.AJAXResult;
+		  import com.atradius.beans.ContactDetails;
+		  com.atradius.beans.AJAXResult ContactDetailsJS.deleteUnicodeContactDetails(java.lang.String langCode);
+		  ]]>
+	</signatures>
+	 <signatures>
+		<![CDATA[
+		  import com.atradius.beans.TextAJAXBean;
+		  import com.atradius.beans.TextDetails;
+		  com.atradius.beans.TextAJAXBean TextDetailsJS.loadTextDetails(int index,String langCode);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.TextAJAXBean;
+		  import com.atradius.beans.TextDetails;
+		  com.atradius.beans.TextAJAXBean TextDetailsJS.saveTextDetails(String langCode,String translation);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.TextAJAXBean;
+		  import com.atradius.beans.TextDetails;
+		  com.atradius.beans.TextAJAXBean TextDetailsJS.updateTextDetails(String langCode,String translation);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.TextAJAXBean;
+		  import com.atradius.beans.TextDetails;
+		  com.atradius.beans.TextAJAXBean TextDetailsJS.deleteTextDetails(String langCode);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.IndividualAJAXBean;
+		  import com.atradius.beans.IndividualDetails;
+		  com.atradius.beans.IndividualAJAXBean IndividualDetailsJS.deleteIndividualDetails(String langCode);
+		  ]]>
+	</signatures>
+	<!-- Added for FreeText Editor CRN [START] -->
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.FreetextAJAXBean;
+		  com.atradius.beans.FreetextAJAXBean FreetextDetailsJS.saveFreetextDetails(String translation);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.FreetextAJAXBean;
+		  com.atradius.beans.FreetextAJAXBean FreetextDetailsJS.deleteFreetextDetails();
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.FreetextAJAXBean;
+		  com.atradius.beans.FreetextAJAXBean FreetextDetailsJS.resetFreetextDetails();
+		  ]]>
+	</signatures>
+	<!-- Added for FreeText Editor CRN [END] -->
+	<!-- Added for Tcode Editor CRN [START] -->
+	
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.MultiChoiceConditionCodeAJAXBean;
+		  List<com.atradius.beans.MultiChoiceConditionCodeAJAXBean> MultiChoiceConditionCodeDetailsJS.loadLangDetails(int choice);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.MultiChoiceConditionCodeAJAXBean;
+		  List<com.atradius.beans.MultiChoiceConditionCodeAJAXBean> MultiChoiceConditionCodeDetailsJS.loadVariableDetails(int choice);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.MultiChoiceConditionCodeAJAXBean;
+		  com.atradius.beans.MultiChoiceConditionCodeAJAXBean MultiChoiceConditionCodeDetailsJS.save(int bumctSequence,String[] langs, String[] texts);
+		  ]]>
+	</signatures>	
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.MultiChoiceConditionCodeAJAXBean;
+		  com.atradius.beans.MultiChoiceConditionCodeAJAXBean MultiChoiceConditionCodeDetailsJS.deleteTextDetails(String langCode,Integer bumctSequence,String text);
+		  ]]>
+	</signatures> 
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.ConditionCodeAJAXBean;
+		  List<com.atradius.beans.ConditionCodeAJAXBean> ConditionCodeDetailsJS.loadLangDetails();
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.ConditionCodeAJAXBean;
+		  List<com.atradius.beans.ConditionCodeAJAXBean> ConditionCodeDetailsJS.save(String[] langs, String[] texts);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.ConditionCodeAJAXBean;
+		  com.atradius.beans.ConditionCodeAJAXBean ConditionCodeDetailsJS.deleteTextDetails(String langCode,String text);
+		  ]]>
+	</signatures>
+	<!-- Added for Tcode Editor CRN [END] -->
+	<!-- Added for Claims by INVSAR1 on 26.08.2014 -->
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.AJAXResult;
+		  import com.atradius.beans.SectionVariableAjaxBean;
+		  com.atradius.beans.AJAXResult MaintainClaimSectionVariablesJS.saveSectionVariables(SectionVariableAjaxBean[] sectionvariableBeans);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.AJAXResult;
+		  com.atradius.beans.AJAXResult MaintainClaimSectionVariablesJS.loadSectionVariables();
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.MaintainLiabilityAJAXBean;
+		  com.atradius.beans.MaintainLiabilityAJAXBean MaintainLiabilityTextJS.saveLiabilityText(String[] codes,String[] texts);
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+		  import com.atradius.beans.AJAXResult;
+		  import com.atradius.beans.ClaimsPaymentTextBean;
+		  com.atradius.beans.AJAXResult MaintainClaimsPaymentJS.saveClaimsPaymentText(ClaimsPaymentTextBean[] beans);
+		  ]]>
+	</signatures>
+	
+	<!-- End of Addition for Claims by INVSAR1 on 26.08.2014 -->
+
+<!-- Added for Modula Policy CRN [START] -->
+	<signatures>
+		<![CDATA[
+			import com.atradius.beans.PolicyDocFreeTextBean
+		  	 com.atradius.beans.PolicyDocFreeTextBean PolicyDocFreeTextJS.savePolicyDocFreeTextDetails(final String tradeDesc)
+		  ]]>
+	</signatures>
+	<signatures>
+		<![CDATA[
+			import com.atradius.beans.PolicyDocCoverTradeDescBean
+		  	 com.atradius.beans.PolicyDocCoverTradeDescBean PolicyDocCoverTradedescJS.saveCoverTradeDesc(final String tradeDesc)
+		  ]]>
+	</signatures>
+	
+	<signatures>
+		<![CDATA[
+			import com.atradius.beans.PolicyDocModuleVarBean
+		  	 com.atradius.beans.PolicyDocModuleVarBean PolicyDocModuleVarJS.saveModuleVarDesc(final String varValue)
+		  ]]>
+	</signatures>
+	
+	<signatures>
+		<![CDATA[
+			import com.atradius.beans.MaintainOPDTextBean
+		  	 com.atradius.beans.MaintainOPDTextBean MaintainOPDTextDefAJAXJS.saveOPDTagTextDef(final String varValue)
+		  ]]>
+	</signatures>
+	<!-- Added for Modula Policy CRN [END] -->
+	<signatures>
+		<![CDATA[
+			import com.atradius.beans.PaymentConditionsBean
+		  	 com.atradius.beans.PaymentConditionsBean PaymentConditionsDescAJAXJS.savePaymentDesc(final String varValue)
+		  ]]>
+	</signatures>
+	
+	<signatures>
+		<![CDATA[
+			import com.atradius.beans.PremiumDetailsBean
+		  	 com.atradius.beans.PremiumDetailsBean PremiumDetailsAJAXJS.saveSubRiskText(final String varValue)
+		  ]]>
+	</signatures>
+</dwr>

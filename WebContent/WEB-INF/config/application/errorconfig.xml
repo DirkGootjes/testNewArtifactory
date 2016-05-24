@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+Don't use characters like : ' or ,
+ -->
+<Errors>
+	<category name="Configuration"></category>
+	<category name="BaseApplicationRuntime">
+		<error>
+			<code>JOB_INSTANCE_ALREADY_COMPLETED</code>
+			<code_presentation_layer>BH01</code_presentation_layer>
+			<description>JOB_INSTANCE_ALREADY_COMPLETED</description>
+			<cause>JOB_INSTANCE_ALREADY_COMPLETED</cause>
+			<severity>Medium</severity>
+		</error>
+		<error>
+			<code>ANOTHER_JOB_EXECUTION_ALREADY_RUNNING</code>
+			<code_presentation_layer>BH06</code_presentation_layer>
+			<description>ANOTHER_JOB_EXECUTION_ALREADY_RUNNING</description>
+			<cause>WAIT AND RE-RUN THE BATCH LATER !</cause>
+			<severity>Medium</severity>
+		</error>
+		<error>
+			<code>JOB_EXECUTION_ALREADY_RUNNING</code>
+			<code_presentation_layer>BH07</code_presentation_layer>
+			<description>JOB_EXECUTION_ALREADY_RUNNING</description>
+			<cause>JOB_EXECUTION_ALREADY_RUNNING</cause>
+			<severity>Medium</severity>
+		</error>	
+		<error>
+			<code>JOB_RESTART_EXCEPTION</code>
+			<code_presentation_layer>BH08</code_presentation_layer>
+			<description>JOB_RESTART_EXCEPTION</description>
+			<cause>JOB_RESTART_EXCEPTION</cause>
+			<severity>Medium</severity>
+		</error>
+		<error>
+			<code>JOB_ENDED_WITH_AN_EXCEPTION</code>
+			<code_presentation_layer>BH09</code_presentation_layer>
+			<description>JOB_ENDED_WITH_AN_EXCEPTION</description>
+			<cause>JOB_ENDED_WITH_AN_EXCEPTION</cause>
+			<severity>Medium</severity>
+		</error>
+		<error>
+			<code>WRONG_INSTANCE_OF</code>
+			<code_presentation_layer>BH00</code_presentation_layer>
+			<description>The object is not an instance of the class [{0}].</description>
+			<cause>WRONG_INSTANCE_OF</cause>
+			<severity>Medium</severity>
+		</error>	
+	</category>
+	<category name="ValidationRuntime">
+		<error>
+			<code>WRONG_APPLICATION_ATTRIBUTE</code>
+			<code_presentation_layer>BH02</code_presentation_layer>
+			<description>WRONG_APPLICATION_ATTRIBUTE</description>
+			<cause>Application attribute is wrong. The batch can't be launched!</cause>
+			<severity>Medium</severity>
+		</error>
+		<error>
+			<code>STOP_NULL_BATCH_REFERENCE</code>
+			<code_presentation_layer>BH03</code_presentation_layer>
+			<description>STOP_NULL_BATCH_REFERENCE</description>
+			<cause>BATCH reference can't be null to stop a batch.</cause>
+			<severity>Medium</severity>
+		</error>
+		<error>
+			<code>START_NULL_BATCH_REFERENCE</code>
+			<code_presentation_layer>BH04</code_presentation_layer>
+			<description>START_NULL_BATCH_REFERENCE</description>
+			<cause>BATCH reference can't be null to start/restart a batch.</cause>
+			<severity>Medium</severity>
+		</error>
+		
+		<error>
+			<code>BATCH_PARAMS_UNKNOWN</code>
+			<code_presentation_layer>BH05</code_presentation_layer>
+			<description>BATCH_PARAMS_UNKNOWN</description>
+			<cause>BATCH params can't be validated. Try again or contact the bacth administrator</cause>
+			<severity>Medium</severity>
+		</error>
+	</category>
+	<category name="BaseApplication">
+		<error>
+			<code>INPUT_FILE_DOESNT_EXIST</code>
+			<code_presentation_layer>BH00</code_presentation_layer>
+			<description>The following input file does not exist : [{0}]</description>
+			<cause>The file can not be found. Check the name or contact the bacth administrator</cause>
+			<severity>Medium</severity>
+		</error>
+	</category>
+	<category name="Business"></category>
+	<category name="DataAccess">
+		<error>
+			<code>SAR_EXCEPTION</code>
+			<code_presentation_layer>BH09</code_presentation_layer>
+			<description>SAR_EXCEPTION</description>
+			<cause>Something went wrong in the SAR stored procedure.</cause>
+			<severity>High</severity>
+		</error>
+	</category>
+	<category name="LegacyDataAccess"></category>
+	<category name="SecurityRuntime">
+		<error>
+			<code>WRONG_REMOTE_CLIENT</code>
+			<code_presentation_layer>SE01</code_presentation_layer>
+			<description>WRONG_REMOTE_CLIENT</description>
+			<cause>The remote client can not call the host.</cause>
+			<severity>High</severity>
+		</error>
+		<error>
+			<code>SAR_EXCEPTION</code>
+			<code_presentation_layer>BH09</code_presentation_layer>
+			<description>SAR_EXCEPTION</description>
+			<cause>Something went wrong in the SAR stored procedure.</cause>
+			<severity>High</severity>
+		</error>
+	</category>	
+	<category name="PresentationLayer">
+		<error>
+			<code>SE01</code>
+			<fault_code>Client</fault_code>
+			<description>WRONG_REMOTE_CLIENT</description>
+			<cause>WRONG_REMOTE_CLIENT</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH00</code>
+			<fault_code>Client</fault_code>
+			<description>JOB_FAILED</description>
+			<cause>JOB_FAILED</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH01</code>
+			<fault_code>Client</fault_code>
+			<description>JOB_INSTANCE_ALREADY_COMPLETED</description>
+			<cause>JOB_INSTANCE_ALREADY_COMPLETED</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH02</code>
+			<fault_code>Client</fault_code>
+			<description>WRONG_APPLICATION_ATTRIBUTE</description>
+			<cause>WRONG_APPLICATION_ATTRIBUTE</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH03</code>
+			<fault_code>Client</fault_code>
+			<description>STOP_NULL_BATCH_REFERENCE</description>
+			<cause>STOP_NULL_BATCH_REFERENCE</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH04</code>
+			<fault_code>Client</fault_code>
+			<description>START_NULL_BATCH_REFERENCE</description>
+			<cause>START_NULL_BATCH_REFERENCE</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH05</code>
+			<fault_code>Client</fault_code>
+			<description>BATCH_PARAMS_UNKNOWN</description>
+			<cause>BATCH_PARAMS_UNKNOWN</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH06</code>
+			<fault_code>Client</fault_code>
+			<description>ANOTHER_JOB_EXECUTION_ALREADY_RUNNING</description>
+			<cause>ANOTHER_JOB_EXECUTION_ALREADY_RUNNING</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH07</code>
+			<fault_code>Client</fault_code>
+			<description>JOB_EXECUTION_ALREADY_RUNNING</description>
+			<cause>JOB_EXECUTION_ALREADY_RUNNING</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH08</code>
+			<fault_code>Client</fault_code>
+			<description>JOB_RESTART_EXCEPTION</description>
+			<cause>JOB_RESTART_EXCEPTION</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH09</code>
+			<fault_code>Client</fault_code>
+			<description>JOB_ENDED_WITH_AN_EXCEPTION</description>
+			<cause>JOB_ENDED_WITH_AN_EXCEPTION</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH10</code>
+			<fault_code>Client</fault_code>
+			<description>JOB_STOPPED</description>
+			<cause>JOB_STOPPED</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>RE01</code>
+			<fault_code>Client</fault_code>
+			<description>REPORTS_FAILED</description>
+			<cause>REPORTS_FAILED</cause>
+			<severity>Medium</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH11</code>
+			<fault_code>Client</fault_code>
+			<description>START_MALFORMED_BATCH_REFERENCE</description>
+			<cause>MALFORMED_BATCH_REFERENCE</cause>
+			<severity>high</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH12</code>
+			<fault_code>Client</fault_code>
+			<description>WRONG_TYPE_ATTRIBUTE</description>
+			<cause>WRONG_TYPE_ATTRIBUTE</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+		<error>
+			<code>BH13</code>
+			<fault_code>Client</fault_code>
+			<description>WRONG_ACTION_ATTRIBUTE</description>
+			<cause>WRONG_ACTION_ATTRIBUTE</cause>
+			<severity>High</severity>
+			<is_show_params>false</is_show_params>
+		</error>
+	</category>
+</Errors>

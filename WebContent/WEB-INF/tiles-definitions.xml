@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config.dtd">
+
+<!-- Definitions for Tiles documentation   -->
+<tiles-definitions>
+	<!--  LAYOUTS START -->
+	<definition name="common.layout"
+		path="/pages/tiles/Layout.jsp">
+	</definition>
+	
+	<definition extends="common.layout"
+		name="maintain.contact">
+		<put name="title" value="maintain.contact" />
+		<put name="body"  value="/pages/MaintainContactDetails.jsp" />
+	</definition>
+	
+	<definition extends="common.layout"
+		name="maintain.individual">
+		<put name="title" value="maintain.individual" />
+		<put name="body"  value="/pages/MaintainIndividualDetails.jsp" />
+	</definition>
+	
+	<definition extends="common.layout"
+		name="maintain.text">
+		<put name="title" value="maintain.text" />
+		<put name="body"  value="/pages/MaintainTextDetails.jsp" />
+	</definition>
+	
+	<!-- Added for FreeText Editor CRN [START] -->	
+	<definition extends="common.layout"
+		name="maintain.freetext">
+		<put name="title" value="maintain.freetext" />
+		<put name="body"  value="/pages/MaintainFreetext.jsp" />
+	</definition>
+	<!-- Added for FreeText Editor CRN [END] -->
+	<!-- Added for Tcode Editor CRN [START] -->	
+	<definition extends="common.layout"
+		name="maintain.conditioncode">
+		<put name="title" value="maintain.conditioncode" />
+		<put name="body"  value="/pages/MaintainConditionCode.jsp" />
+	</definition>
+	<definition extends="common.layout"
+		name="maintain.multiChoiceConditioncode">
+		<put name="title" value="maintain.multiChoiceConditioncode" />
+		<put name="body"  value="/pages/MaintainMultiChoiceConditionCode.jsp" />
+	</definition>
+	<!-- Added for Tcode Editor CRN [END] -->
+	<!-- Added for Claims by INVSAR1 on 26.08.2014 -->
+	<definition extends="common.layout"
+		name="maintain.claimsectionvariables">
+		<put name="title" value="maintain.claimsectionvariables" />
+		<put name="body"  value="/pages/MaintainClaimSectionVariables.jsp" />
+	</definition>
+	<definition extends="common.layout"
+		name="maintain.liabilitytext">
+		<put name="title" value="maintain.liabilitytext" />
+		<put name="body"  value="/pages/MaintainLiabilityText.jsp" />
+	</definition>
+	<definition extends="common.layout"
+		name="maintain.clmpayment">
+		<put name="title" value="maintain.clmpayment" />
+		<put name="body"  value="/pages/MaintainClaimsPayment.jsp" />
+	</definition>
+	<!-- End of Addition for Claims by INVSAR1 on 26.08.2014 -->
+	<definition extends="common.layout"
+		name="display.error">
+		<put name="title" value="error" />
+		<put name="body"  value="/pages/Error.jsp" />
+	</definition>
+
+	<!-- Added for Modula Policy CRN [START] -->
+	<definition extends="common.layout"
+		name="maintain.policyDocFreeText">
+		<put name="title" value="maintain.policyDocFreeText" />
+		<put name="body"  value="/pages/MaintainPolicyDocFreeText.jsp" />
+	</definition>
+	
+	<definition extends="common.layout"
+		name="maintain.policyDocCoverTradeDesc">
+		<put name="title" value="maintain.policyDocCoverTradeDesc" />
+		<put name="body"  value="/pages/MaintainPolicyDocCoverTradeDesc.jsp" />
+	</definition>
+	
+	<definition extends="common.layout"
+		name="maintain.policyDocModuleVar">
+		<put name="title" value="maintain.policyDocModuleVar" />
+		<put name="body"  value="/pages/MaintainPolicyDocModuleVariable.jsp" />
+	</definition>
+	
+	<definition extends="common.layout"
+		name="maintain.OPDTextDef">
+		<put name="title" value="maintain.OPDTextDef" />
+		<put name="body"  value="/pages/MaintainOPDText.jsp" />
+	</definition>
+	
+	<definition extends="common.layout"
+		name="maintain.paymentConditions">
+		<put name="title" value="maintain.paymentConditions" />
+		<put name="body"  value="/pages/MaintainPaymentConditions.jsp" />
+	</definition>
+	
+	<definition extends="common.layout"
+		name="maintain.premiumDetails">
+		<put name="title" value="maintain.premiumDetails" />
+		<put name="body"  value="/pages/MaintainPremiumDetails.jsp" />
+	</definition>
+	
+	<!-- Added for Modula Policy CRN [END] -->	
+
+	<!-- <definition extends="common.layout"
+		name="display.info">
+		<put name="title" value="info" />
+		<put name="body"  value="/pages/Info.jsp" />
+	</definition>
+	 -->
+</tiles-definitions>

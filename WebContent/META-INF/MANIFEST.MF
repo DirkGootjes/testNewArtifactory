@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: webadmn
+Build-Jdk: 1.5.0
+Implementation-Title: Atradius TestNewArtifactory WAR
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.atradius.OPUS
+Implementation-Vendor: ATRADIUS
+Implementation-Build: 2013-06-05 22:46:51
+

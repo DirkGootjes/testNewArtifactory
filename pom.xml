@@ -8,7 +8,7 @@
 		<version>2.0</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
-	
+	<!--just some text for CRN99999  -->
 	<!--  General  -->
 	<groupId>com.atradius.OPUS</groupId>
 	<artifactId>TestNewArtifactory</artifactId>
